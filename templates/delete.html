@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Delete page {% endblock %}
+{% block content %} 
+<main class='p-5'>
+  <h1>Hello Delete world</h1> 
+  <h2>Are you sure you like to remove {{ user.user }}</h2>
+  <a class="btn btn-light" href="{{ url_for ('index')}}">No, I changed my mind</a>
+  <a class="btn btn-danger" href="{{ url_for ('confirm_delete', user_id=user['_id'])}}">Confirm Delete</a>
+</main>
+{% endblock %}

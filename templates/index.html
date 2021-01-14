@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Index page {% endblock %}
+{% block content %} 
+<main class='p-5'>
+  <h1>Hello back Index world</h1> 
+  
+  {% for item in users %}
+  <div class="border">
+    <h2>ID : {{item._id}}</h2>
+    <h2>Name :{{ item.user }} </h2>
+    <h2>Gender :{{ item.gender }} </h2>
+    <a class="btn btn-dark" href="{{ url_for ('update', user_id=item['_id'])}}">Edit</a>
+    <a class="btn btn-danger" href="{{ url_for ('delete', user_id=item['_id'])}}">Delete</a>
+  </div>
+  {% endfor %}
+</main>
+{% endblock %}

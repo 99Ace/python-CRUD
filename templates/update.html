@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Update page {% endblock %}
+{% block content %} 
+<section class='p-5'>
+  <h1>Hello Update world</h1> 
+
+  <!-- form for entry -->
+  <form method="POST">
+    <input type="text" name="user" value="{{user.user}}" placeholder="Enter username">
+    <input type="text" name="gender" value="{{user.gender}}" placeholder="gender">
+    <input type="submit" value="Update">
+  </form> 
+
+</section>
+{% endblock %}
